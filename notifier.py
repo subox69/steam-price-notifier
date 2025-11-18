@@ -9,8 +9,8 @@ GAMES = {
     # Add more games here
 }
 
-TELEGRAM_BOT_TOKEN = "8594393626:AAF9tD3TOEh3ySBlzXmItKIb6zDwFtpNKI4"  # Your Bot Token
-TELEGRAM_CHAT_ID = "5284278311"          # Your Chat ID
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")  # Your Bot Token
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")      # Your Chat ID
 # ============================
 
 def send_telegram(message):
