@@ -1,5 +1,6 @@
 name: Steam Price Notifier
 
+# Run automatically every hour + manual trigger
 on:
   schedule:
     - cron: '0 * * * *'  # Every hour at minute 0
@@ -10,16 +11,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout your repo
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # Step 2: Set up Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
+      # Step 3: Install dependencies
       - name: Install dependencies
         run: pip install requests
 
+      # Step 4: Run the notifier script with secrets
       - name: Run notifier
         run: python notifier.py
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
