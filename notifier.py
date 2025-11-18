@@ -2,12 +2,13 @@ import requests
 
 # ========== CONFIG ==========
 GAMES = {
-    "730": "CS2",          # Steam AppID : Game Name
-    "570": "Dota 2",
+    "2756920": "Keep Driving",          # Steam AppID : Game Name
+    "2661300": "Grounded 2",
+    "1649950": "News Tower",
     # Add more games here
 }
 
-TELEGRAM_BOT_TOKEN = "8594393626:myKey"  # Your Bot Token
+TELEGRAM_BOT_TOKEN = "8594393626:AAF9tD3TOEh3ySBlzXmItKIb6zDwFtpNKI4"  # Your Bot Token
 TELEGRAM_CHAT_ID = "5284278311"          # Your Chat ID
 # ============================
 
