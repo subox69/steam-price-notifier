@@ -5,6 +5,7 @@ GAMES = {
     "2756920": "Keep Driving",          # Steam AppID : Game Name
     "2661300": "Grounded 2",
     "1649950": "News Tower",
+    "2274620": "Discounty",
     # Add more games here
 }
 
